@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>CRUD OPERATIONS</title>
+</head>
+
+<body>
+    <h1 class="visually-hidden">CRUD OPERATIONS</h1>
+    <div class="container">
+        <div class="block">
+            <nav class="crud-nav">
+                <h2 class="nav-title">crud operations</h2>
+                <label class="change-img" for="change-img">
+                    <img class="change-img-upload" id="user-img" src="./img/default-img-user.png" alt="user img">
+                    <input class="visually-hidden" type="file" id="change-img" onchange="changeImage(event)">
+                </label>                
+                <h3 class="user-name">User</h3>
+                <h4 class="user-status">admin</h4>
+                <a href="#">students</a>
+                <label class="log-out-label" for="log-out">
+                    <span class="log-out-title">Logout</span>
+                    <img src="./img/logout.png" alt="logout img">
+                </label>
+            </nav>
+            <div class="block-two">
+                <div class="crud-block">
+                    <img class="crud-block-img" src="./img/crud-block-img.png" alt="crud img">
+                    <div class="box-wrapper">
+                        <div class="crud-box">
+                            <input class="search-input" type="text" placeholder="Search..." autocomplete="off">
+                            <img src="./img/search-icon.svg" alt="search img">
+                            <ul class="search-list"></ul>
+                        </div>
+                        <img src="./img/box-wrapper-img.png" alt="notifications img">
+                    </div>
+                </div>
+                <div class="students-list-wrapper">
+                    <div class="students-list-wrapper-header">
+                        <h3 class="wrapper-header-title">Students List</h3>
+                        <div class="up-down-wrapper">
+                            <div class="up-down">
+                                <img class="up-icon" src="./img/up-icon.svg" alt="up icon">
+                                <img class="down-con" src="./img/down-icon.svg" alt="down icon">
+                            </div>
+                            <button class="wrapper-header-btn">ADD NEW STUDENT</button>
+                        </div>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class="student-item-header">Name</th>
+                                <th class="student-item-header">Email</th>
+                                <th class="student-item-header">Phone</th>
+                                <th class="student-item-header">Enroll Number</th>
+                                <th class="student-item-header">Date admission</th>
+                                <th class="student-item-header"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-wrapper" class="modal-wrapper">
+        <div class="modal"></div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
